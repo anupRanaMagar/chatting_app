@@ -1,4 +1,4 @@
-import AddFriendButton from "@/components/ui/AddFriendButton";
+import AddFriendButton from "@/components/AddFriendButton";
 
 const Add = () => {
   return (
