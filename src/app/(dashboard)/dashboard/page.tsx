@@ -34,7 +34,7 @@ const Dashboard = async () => {
     <div className="container py-12">
       <h1 className="font-bold text-5xl mb-8">Recent chats</h1>
       {friendWithLastMessage.length === 0 ? (
-        <p className="text-sm text-zinc-500">Nothing</p>
+        <p className="text-sm text-zinc-500">Chat is empty.</p>
       ) : (
         friendWithLastMessage.map((friend) => (
           <div
