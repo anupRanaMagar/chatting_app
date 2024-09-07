@@ -54,7 +54,7 @@ export default function LoginPage() {
             transition={{ delay: 0.3 }}
             className="text-center text-gray-600 mt-2"
           >
-            "Where Conversations Begin: Connect Seamlessly."
+            &quot;Where Conversations Begin: Connect Seamlessly.&quot;
           </motion.p>
         </CardHeader>
         <CardContent>
