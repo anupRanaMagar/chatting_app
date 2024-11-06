@@ -61,7 +61,7 @@ const Messages: FC<MessagesProps> = ({
         return (
           <div
             className="chat-message"
-            key={`${message.id}-${message.timeStamp}`}
+            key={`${message.id}-${message.timestamp}`}
           >
             <div
               className={cn("flex items-end", {
@@ -89,7 +89,7 @@ const Messages: FC<MessagesProps> = ({
                 >
                   {message.text}{" "}
                   <span className="ml-2 text-xs text-gray-400">
-                    {formatTimestamp(message.timeStamp)}
+                    {formatTimestamp(message.timestamp)}
                   </span>
                 </span>
               </div>

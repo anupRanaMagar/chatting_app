@@ -35,7 +35,7 @@ export async function POST(req: Request) {
       return new Response("Unauthorized", { status: 401 });
     }
 
-    const timeStamp = Date.now();
+    const timestamp = Date.now();
 
     const rawSender = (await fetchRedis(
       `get`,
@@ -47,7 +47,7 @@ export async function POST(req: Request) {
       id: nanoid(),
       senderId: session.user.id,
       text,
-      timeStamp,
+      timestamp,
     };
 
     const message = messageValidator.parse(messageDate);
@@ -65,7 +65,7 @@ export async function POST(req: Request) {
     });
 
     await db.zadd(`chat:${chatId}:messages`, {
-      score: timeStamp,
+      score: timestamp,
       member: JSON.stringify(message),
     });
 
